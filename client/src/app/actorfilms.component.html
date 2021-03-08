@@ -1,0 +1,7 @@
+<p *ngFor="let m of movies">
+  <img src="{{ m.image }}"/>
+	{{ m.name }}
+  <span *ngFor="let actor of m.actors">
+    <a [routerLink]="['filmsWith', actor]">{{ actor }}</a>
+  </span>
+</p>

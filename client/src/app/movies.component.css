@@ -1,0 +1,133 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.movies{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.films{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.film{
+  flex-basis: 25%;
+  border: 1px solid lightgray;
+  margin: 1%;
+}
+
+.film img{
+  width: 350px;
+  height: 500px;
+}
+
+.film ul{
+  list-style-type: none;
+}
+
+.film a{
+  text-decoration: none;
+  color: black;
+}
+
+.film a:hover{
+  color: blue;
+}
+
+.filterform{
+  display: flex;
+  align-self: center;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.checkbox-btn {
+	display: inline-block;
+	margin: 0 5px 0 0;
+	user-select: none;
+	position: relative;
+}
+.checkbox-btn input[type=checkbox] {
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+.checkbox-btn span {
+	display: inline-block;
+	cursor: pointer;
+	padding: 0px 10px;
+	line-height: 30px;
+	border: 1px solid #999;
+	border-radius: 4px;
+	transition: background 0.2s ease;
+}
+
+.checkbox-btn input[type=checkbox]:checked + span {
+	background: #ffe0a6;
+}
+ 
+/* Focus */
+.focused span {
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+ 
+/* Hover */
+.checkbox-btn:hover {
+	color: #666;
+}
+ 
+/* Active */
+.checkbox-btn input[type=checkbox]:active:not(:disabled) + span {
+	background: #d2c5ac;
+	color: #000;
+}
+ 
+/* Disabled */
+.checkbox-btn input[type=checkbox]:disabled + span {
+	background: #efefef;
+	color: #666;
+	cursor: default;
+}
+.checkbox-btn input[type=checkbox]:checked:disabled + span {
+	background: #f7efdc;
+}
+
+img{
+  width: 100px;
+  height: 100px;
+}
+
+.genres{
+  width: 20%;
+}
+
+.rating-result {
+	width: 100%;
+	margin: 0 auto;
+}
+.rating-result span {
+	padding: 0;
+	font-size: 24px;
+	line-height: 1;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+.rating-result > span:before {
+	content: '★';
+}
+.rating-result > span.active {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}

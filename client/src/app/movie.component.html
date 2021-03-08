@@ -1,0 +1,22 @@
+<div class="film">
+        <ul>
+          <li><img src="{{movie.image}}"/></li>
+          <li><b>{{ movie.name }} ({{ movie.year }}) </b></li>
+          <li><b>Жанр: </b>{{ movie.genre }}</li>
+          <li><b>Країна: </b>{{ movie.country }}</li>
+          <li><b>Тривалість <span *ngIf="movie.type == 'Серіал'">серії</span>:</b> {{ movie.duration }} хв </li>
+          <li>
+            <b>Режисер: </b>
+            <span *ngFor="let director of movie.director">
+              <span (click)= "goToDirectorFilms(director)">{{ director }} </span>
+            </span>
+          </li>
+          <li>
+            <b>Актори: </b>
+            <span *ngFor="let actor of movie.actors">
+              <span (click)= "goToActorFilms(actor)">{{ actor }} </span>
+            </span>
+          </li>
+          <li><b>Сюжет: </b>{{ movie.info }}</li>
+        </ul>
+</div>

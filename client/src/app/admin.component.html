@@ -1,0 +1,9 @@
+<p *ngFor="let m of movies">
+  {{ m.name }}
+  
+  <button (click)="deleteMovie(m)">Remove</button>
+  <a [routerLink]="['editfilm', m._id]">Change</a>
+  <router-outlet></router-outlet>
+</p>
+
+<a routerLink="addfilm">Add film</a>

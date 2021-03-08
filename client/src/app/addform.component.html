@@ -1,0 +1,15 @@
+ <form #addForm="ngForm" novalidate (ngSubmit)="addMovie(addForm)">
+      Name: <input type="text" name="title" ngModel/>
+      Year: <input type="number" min="1900" max="2021" name="year" ngModel/>
+      Type: <select name="type" ngModel>
+        <option value="Серіал">Серіал</option>
+        <option value="Фільм">Фільм</option>
+	    </select>
+      Genre: <input type="text" name="genre" ngModel/>
+      Director: <input type="text" name="director" ngModel/>
+      Info: <input type="text" name="info" ngModel/>
+      Duration: <input type="number" name="duration" ngModel/> minutes
+      Actors: <input type="text" name="actors" ngModel/>
+      Country: <input type="text" name="country" ngModel/>
+      <input type="submit" value="Add"/>
+</form>
